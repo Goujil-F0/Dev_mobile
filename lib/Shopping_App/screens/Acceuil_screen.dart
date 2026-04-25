@@ -1,5 +1,3 @@
-
-import 'package:expense_tracker/Shopping_App/models/categorie.dart';
 import 'package:expense_tracker/Shopping_App/screens/categories_page.dart';
 import 'package:expense_tracker/Shopping_App/screens/favoris_screen.dart';
 import 'package:flutter/material.dart';
@@ -44,29 +42,6 @@ class _AcceuilScreenState extends State<AcceuilScreen> {
           ),
           BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favoris'),
         ],
-      ),
-    );
-  }
-}
-
-class CategorieCard extends StatelessWidget {
-  final Categorie categorie;
-
-  const CategorieCard({super.key, required this.categorie});
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      child: Container(
-        decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 192, 136, 189),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        alignment: Alignment.center,
-        child: Text(
-          categorie.nom,
-          style: const TextStyle(color: Colors.white, fontSize: 25),
-        ),
       ),
     );
   }
