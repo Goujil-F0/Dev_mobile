@@ -1,6 +1,6 @@
-import 'package:expense_tracker/Ecran_App/screens/categorie_screen.dart';
+import 'package:expense_tracker/Shopping_App/screens/Acceuil_screen.dart';
+import 'package:expense_tracker/Shopping_App/screens/categorie_screen.dart';
 import 'package:flutter/material.dart';
-import 'screens/acceuil_screen.dart';
 
 void main() {
   runApp(MainApp());

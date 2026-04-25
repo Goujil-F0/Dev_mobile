@@ -1,5 +1,5 @@
-import 'package:expense_tracker/Ecran_App/models/categorie.dart';
-import 'package:expense_tracker/Ecran_App/models/produit.dart';
+import 'package:expense_tracker/Shopping_App/models/categorie.dart';
+import 'package:expense_tracker/Shopping_App/models/produit.dart';
 
 List<Categorie> dummyCategories = [
   Categorie(nom: 'Sport', produit: [

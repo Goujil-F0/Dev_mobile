@@ -1,4 +1,4 @@
-import 'package:expense_tracker/Ecran_App/models/categorie.dart';
+import 'package:expense_tracker/Shopping_App/models/categorie.dart';
 import 'package:flutter/material.dart';
 
 class CategorieScreen extends StatelessWidget {

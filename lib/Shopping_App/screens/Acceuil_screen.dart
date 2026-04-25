@@ -1,6 +1,6 @@
-import 'package:expense_tracker/Ecran_App/data/dummy_data.dart';
-import 'package:expense_tracker/Ecran_App/models/categorie.dart';
-import 'package:expense_tracker/Ecran_App/screens/categorie_screen.dart';
+import 'package:expense_tracker/Shopping_App/data/dummy_data.dart';
+import 'package:expense_tracker/Shopping_App/models/categorie.dart';
+import 'package:expense_tracker/Shopping_App/screens/categorie_screen.dart';
 import 'package:flutter/material.dart';
 
 class AcceuilScreen extends StatefulWidget {

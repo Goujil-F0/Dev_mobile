@@ -1,4 +1,4 @@
-import 'package:expense_tracker/Ecran_App/models/produit.dart';
+import 'package:expense_tracker/Shopping_App/models/produit.dart';
 
 class Categorie {
   final String nom;
