@@ -1,6 +1,7 @@
-import 'package:expense_tracker/Shopping_App/data/dummy_data.dart';
+
 import 'package:expense_tracker/Shopping_App/models/categorie.dart';
-import 'package:expense_tracker/Shopping_App/screens/categorie_screen.dart';
+import 'package:expense_tracker/Shopping_App/screens/categories_page.dart';
+import 'package:expense_tracker/Shopping_App/screens/favoris_screen.dart';
 import 'package:flutter/material.dart';
 
 class AcceuilScreen extends StatefulWidget {
@@ -11,34 +12,34 @@ class AcceuilScreen extends StatefulWidget {
 }
 
 class _AcceuilScreenState extends State<AcceuilScreen> {
+  int currentIndex = 0;
+  final List<Widget> pages = [CategoriesPage(), FavorisScreen()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Shopping app'),
+        title: Text(currentIndex == 0 ? 'Categories' : 'Favoris'),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 144, 182, 248),
+        backgroundColor: Color.fromARGB(255, 192, 136, 189),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10),
-        child: GridView.builder(
-          itemCount: dummyCategories.length,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-          ),
-          itemBuilder: (context, index) {
-            final categorie = dummyCategories[index];
-
-            return CategorieCard(categorie: categorie);
-          },
-        ),
+        padding: const EdgeInsets.all(20.0),
+        child: pages[currentIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color.fromARGB(255, 192, 136, 189),
+        currentIndex: currentIndex,
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_bag),
+            icon: Icon(
+              Icons.shopping_bag,
+              color: Color.fromARGB(255, 70, 82, 88),
+            ),
             label: 'Category',
           ),
           BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favoris'),
@@ -56,27 +57,15 @@ class CategorieCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      borderRadius: BorderRadius.circular(20),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(20),
-        onTap: () {
-          print("clicked");
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (_) => CategorieScreen(categorie: categorie),
-            ),
-          );
-        },
-        child: Container(
-          decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 58, 92, 152),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          alignment: Alignment.center,
-          child: Text(
-            categorie.nom,
-            style: const TextStyle(color: Colors.white, fontSize: 25),
-          ),
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 192, 136, 189),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        alignment: Alignment.center,
+        child: Text(
+          categorie.nom,
+          style: const TextStyle(color: Colors.white, fontSize: 25),
         ),
       ),
     );
