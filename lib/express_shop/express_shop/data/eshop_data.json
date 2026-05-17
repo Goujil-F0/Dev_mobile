@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Electronics",
+        "products": [
+            {
+                "name": "Smartphone X",
+                "price": 799.20,
+                "description": "High-end smartphone with OLED display and fast processor",
+                "imagePath": "smartphone.jpg"
+            },
+            {
+                "name": "Wireless Headphones",
+                "price": 199.20,
+                "description": "Noise-cancelling over-ear wireless headphones",
+                "imagePath": "headphones.jpg"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Clothing",
+        "products": [
+            {
+                "name": "Men's T-Shirt",
+                "price": 25.20,
+                "description": "Comfortable cotton t-shirt for everyday wear",
+                "imagePath": "tshirt.jpg"
+            },
+            {
+                "name": "Women's Jacket",
+                "price": 120.20,
+                "description": "Stylish and warm jacket for winter season",
+                "imagePath": "jacket.jpg"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Home Appliances",
+        "products": [
+            {
+                "name": "Blender Pro",
+                "price": 89.10,
+                "description": "Powerful blender for smoothies and food prep",
+                "imagePath": "blender.jpg"
+            },
+            {
+                "name": "Air Conditioner",
+                "price": 450.20,
+                "description": "Energy-efficient air conditioner with fast cooling",
+                "imagePath": "ac.jpg"
+            }
+        ]
+    }
+]
