@@ -1,8 +1,14 @@
-import 'package:expense_tracker/Compteur/compteur.dart';
+import 'package:expense_tracker/Compteur/Compteur_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => CounterPrv(), 
+      child: MyApp(),
+      )
+      );
 }
 
 class MyApp extends StatelessWidget {
@@ -10,8 +16,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: CompteurScreen(),
-    );
+    return MaterialApp(home: CompteurProvider());
   }
 }
