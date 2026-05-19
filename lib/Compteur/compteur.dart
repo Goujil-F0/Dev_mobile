@@ -9,7 +9,7 @@ class CompteurScreen extends StatefulWidget {
 
 class _CompteurScreenState extends State<CompteurScreen> {
   int n = 0;
-  @override
+
   void increment() {
     setState(() {
       n++;
